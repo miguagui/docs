@@ -50,7 +50,10 @@ export const navigation: NavItemDefinition[] = [
         slug: 'schema'
       },
       {
-        slug: 'assemblyscript-api'
+        slug: 'handlers'
+      },
+      {
+        slug: 'assemblyscript'
       },
       {
         slug: 'unit-testing'
