@@ -122,6 +122,9 @@ export const navigation: NavItemDefinition[] = [
     slug: 'querying-subgraphs',
     children: [
       {
+        slug: 'query-the-graph'
+      },
+      {
         slug: 'graphql-api'
       },
       {
@@ -151,6 +154,9 @@ export const navigation: NavItemDefinition[] = [
       },
       {
         slug: 'querying-from-your-app'
+      },
+      {
+        slug: 'near'
       }
     ]
   },
