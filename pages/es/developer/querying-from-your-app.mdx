@@ -134,3 +134,34 @@ const client = createClient({
 
 const data = await client.query(tokensQuery).toPromise()
 ```
+
+
+### Python 
+
+Otra posible opción es obtener los datos en Python, para ello, bastará con utilizar el siguiente código :
+
+```python
+import requests
+import json
+import pandas as pd
+
+query = """query{
+    tokens{
+        id
+        tokenID
+        contentURI
+    }
+}"""
+
+url = 'https://api.thegraph.com/subgraphs/name/username/subgraphname'
+consult = requests.post(url, json={'query': query})
+json_data = json.loads(consult.text)
+df_data = json_data['data']['tokens']
+df = pd.DataFrame(df_data)
+```
+Con ello obtendrás un dataframe con las columnas id, tokenID, contentURI
+
+
+
+
+
